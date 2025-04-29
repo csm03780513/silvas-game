@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ant-button":"antd-mini/es/Button/index",
+    "ant-input": "antd-mini/es/Input/index"
+  }
+}

@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="title">Tic-Tac-Toe</view>
+
+  <view class="buttons">
+    <ant-button type="primary" onTap="createGame">Create Game </ant-button>
+    <view a:if="{{ gameId!='' }}"class="info">
+      Your Created GameRoom Id is: {{gameId}}
+    </view>
+    <input placeholder="Enter Game ID" onInput="onGameIdInput"/>
+    <ant-button type="default" onTap="joinGame">Join Game </ant-button>
+  </view>
+
+  <view a:if="{{ gameId!='' }}" class="board">
+    <block a:for="{{board}}" a:for-item="row" a:for-index="i">
+      <view class="row">
+        <block a:for="{{row}}" a:for-item="cell" a:for-index="j">
+          <view class="cell" onTap="makeMove" data-row="{{i}}" data-col="{{j}}">
+            {{cell}}
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <view class="info">
+    Current Turn: {{currentTurn}} | You: {{playerSymbol}}
+  </view>
+</view>
