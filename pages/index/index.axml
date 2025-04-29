@@ -4,9 +4,9 @@
   <view class="buttons">
     <ant-button type="primary" onTap="createGame">Create Game </ant-button>
     <view a:if="{{ gameId!='' }}"class="info">
-      Your Created GameRoom Id is: {{gameId}}
+      Active Room Id:{{gameId}}
     </view>
-    <input placeholder="Enter Game ID" onInput="onGameIdInput"/>
+    <input placeholder="Enter Game ID" value="{{gameId}}" onInput="onGameIdInput"/>
     <ant-button type="default" onTap="joinGame">Join Game </ant-button>
   </view>
 
@@ -21,7 +21,17 @@
       </view>
     </block>
   </view>
-
+  <view>
+    
+  </view>
+  <ant-toast
+  content="Winner is {{winner}}"
+  visible="{{toastShow}}"
+  duration="{{0}}"
+  showMask="{{true}}"
+  maskCloseable="{{true}}"
+  onClose="handleCloseToast"
+/>
   <view class="info">
     Current Turn: {{currentTurn}} | You: {{playerSymbol}}
   </view>

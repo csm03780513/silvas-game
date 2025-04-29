@@ -5,9 +5,16 @@ Page({
     playerId: '',
     playerSymbol: '',
     board: [['', '', ''], ['', '', ''], ['', '', '']],
-    currentTurn: ''
+    currentTurn: '',
+    winner: '',
+    toastShow: false,
   },
 
+  handleCloseToast(e) {
+    this.setData({
+      toastShow: false,
+    });
+  },
   onLoad() {
     this.setData({ playerId: 'player-' + Math.random().toString(36).substr(2, 5) });
   },
@@ -15,7 +22,6 @@ Page({
   onGameIdInput(e) {
     this.setData({ gameId: e.detail.value });
     this.data.gameId = e.detail.value;
-    console.log("gameId here is:"+`${this.data.gameId}`);
   },
 
   createGame() {
@@ -54,7 +60,10 @@ Page({
         col
       },
       success: (res) => {
-        this.setData({ board: res.data.board, currentTurn: res.data.nextTurn });
+        this.setData({ board: res.data.board, currentTurn: res.data.nextTurn, winner: res.data.winner });
+        if(this.data.winner!=null){
+          this.data.toastShow = true;
+        }
       }
     });
   },
@@ -65,9 +74,12 @@ Page({
         url: `${this.data.server}/status/${this.data.gameId}`,
         method: 'GET',
         success: (res) => {
-          this.setData({ board: res.data.board, currentTurn: res.data.currentTurn });
+          this.setData({ board: res.data.board, currentTurn: res.data.currentTurn, winner: res.data.winner });
+          if(this.data.winner!=null){
+            this.data.toastShow = true;
+          }
         }
       });
-    }, 1000); // poll every 3s
+    }, 500); // poll every 500ms
   }
 });
