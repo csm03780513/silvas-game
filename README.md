@@ -56,7 +56,7 @@ https://olmercycheperur.com/silva
 - [back-end-source-code]
 - https://github.com/csm03780513/silvas-game-server
 
-Frontend is hosted as an Alipay or M-Pesa Mini Program.
+Frontend is hosted as an M-Pesa Mini Program.
 
 ---
 
