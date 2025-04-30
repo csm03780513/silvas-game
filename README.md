@@ -27,16 +27,16 @@ A multiplayer turn-based Tic-Tac-Toe game where two players can create and join 
 ## 🛠️ API Overview
 
 ### Create Game
-`POST /api/create`
+`POST /create`
 - Response: `{ gameId: "ABCD1234", board: [...], currentTurn: "X" }`
 
 ### Join Game
-`POST /api/join`
+`POST /join`
 - Body: `{ gameId: "ABCD1234" }`
 - Response: `{ board: [...], currentTurn: "X" }`
 
 ### Make Move
-`POST /api/move`
+`POST /move`
 - Body: `{ gameId, player, row, col }`
 - Response: `{ board: [...], status: "ongoing" | "win" | "draw", winner: "X" | "O" | null }`
 
