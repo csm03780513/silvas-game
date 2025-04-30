@@ -52,3 +52,12 @@ A multiplayer turn-based Tic-Tac-Toe game where two players can create and join 
 
 ## 🌐 Deployment
 Backend runs at:
+https://olmercycheperur.com/silva
+
+Frontend is hosted as an Alipay or M-Pesa Mini Program.
+
+---
+
+## 👥 Tech Stack
+- Node.js + Express (backend)
+- M-Pesa Mini Program (frontend)
