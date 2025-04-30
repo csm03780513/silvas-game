@@ -1,10 +1,10 @@
-# 🕹️ Tic-Tac-Toe Mini App
+#  Tic-Tac-Toe Mini App
 
 A multiplayer turn-based Tic-Tac-Toe game where two players can create and join rooms, take turns, and get real-time game status.
 
 ---
 
-## 🚀 How to Play
+##  How to Play
 
 ### 1. Create a Game
 - Tap **"Create Game"**
@@ -24,7 +24,7 @@ A multiplayer turn-based Tic-Tac-Toe game where two players can create and join 
 
 ---
 
-## 🛠️ API Overview
+##  API Overview
 
 ### Create Game
 `POST /create`
@@ -42,7 +42,7 @@ A multiplayer turn-based Tic-Tac-Toe game where two players can create and join 
 
 ---
 
-## 🧠 Game Rules
+##  Game Rules
 - 3x3 grid
 - X always goes first
 - First to align 3 in a row (horizontal, vertical, diagonal) wins
@@ -50,7 +50,7 @@ A multiplayer turn-based Tic-Tac-Toe game where two players can create and join 
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 Backend runs at:
 https://olmercycheperur.com/silva
 - [back-end-source-code]
@@ -60,6 +60,6 @@ Frontend is hosted as an Alipay or M-Pesa Mini Program.
 
 ---
 
-## 👥 Tech Stack
+##  Tech Stack
 - Node.js + Express (backend)
 - M-Pesa Mini Program (frontend)
