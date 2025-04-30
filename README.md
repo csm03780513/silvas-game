@@ -53,8 +53,8 @@ A multiplayer turn-based Tic-Tac-Toe game where two players can create and join 
 ## 🌐 Deployment
 Backend runs at:
 https://olmercycheperur.com/silva
-[back-end-source-code]
-https://github.com/csm03780513/silvas-game-server
+- [back-end-source-code]
+- https://github.com/csm03780513/silvas-game-server
 
 Frontend is hosted as an Alipay or M-Pesa Mini Program.
 
